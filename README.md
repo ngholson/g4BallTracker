@@ -14,10 +14,10 @@ supports TV ball colors as well as standard ball colors <i>(see screenshots belo
 
 
 <b>USE:</b><br> 
-Choose which game (eight, nine, or ten) from the list and select overlay size.<br>
+Choose which game `eight` `nine` or `ten` from the list and select overlay size.<br>
 Click on balls in dock to remove them from overlay when balls are pocketed. <br>
 `Hide` / `Show` Button will hide and display the ball minder list. <br>
-`Reset` button will start game over.  <br><hr>
+`Reset` button will reset the ball icons in the stream and dock.  <br><hr>
 
 
 <b>SETUP:</b><br>
