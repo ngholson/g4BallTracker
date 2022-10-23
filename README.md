@@ -12,7 +12,10 @@ A simple OBS Browser Dock and Stream overlay for pool streamers to track balls l
 supports TV ball colors as well as standard ball colors <i>(see screenshots below)</i>
 <hr>
 <b>USE:</b><br> 
-click on balls in dock to remove them from overlay when balls are pocketed. <br><hr>
+Choose which game (eight, nine, or ten) from the list and select overlay size.<br>
+click on balls in dock to remove them from overlay when balls are pocketed. <br>  
+Hide / Show Button will hide and display the ball minder list. <br>
+Reset button will start game over.  <br><hr>
 
 <b>SETUP:</b><br>
 `1` &nbsp;&nbsp;&nbsp;open `ballStyle.js` in any text editor and change the variable to suit your ball color prefrence.<br>
