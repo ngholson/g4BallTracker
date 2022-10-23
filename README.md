@@ -11,11 +11,13 @@ A simple OBS Browser Dock and Stream overlay for pool streamers to track balls l
 
 supports TV ball colors as well as standard ball colors <i>(see screenshots below)</i>
 <hr>
+
+
 <b>USE:</b><br> 
 Choose which game (eight, nine, or ten) from the list and select overlay size.<br>
-click on balls in dock to remove them from overlay when balls are pocketed. <br>  
-Hide / Show Button will hide and display the ball minder list. <br>
-Reset button will start game over.  <br><hr>
+Click on balls in dock to remove them from overlay when balls are pocketed. <br>
+`Hide` / `Show` Button will hide and display the ball minder list. <br>
+`Reset` button will start game over.  <br><hr>
 
 
 <b>SETUP:</b><br>
@@ -24,7 +26,7 @@ Reset button will start game over.  <br><hr>
 `3` &nbsp;&nbsp;&nbsp;Add a new `Browser` source to your scene. change the URL the the path of `browser-source.html`.<br>
 
 
-<sub>(a better setup guide and wiki will come soon)</sub><hr>
+<hr>
 
 <sub>screenshots shown include [g4ScoreBoard](https://github.com/ngholson/g4ScoreBoard/)</sub>
 ![tv_colors](https://user-images.githubusercontent.com/46265156/197374246-0dd21d4b-1e43-45ab-b072-eb2b39118786.png)
