@@ -9,7 +9,7 @@ Keep track of balls left on table - an OBS overlay and Dock for pool streamers
 
 A simple OBS Browser Dock and Stream overlay for pool streamers to track balls left on the table. 
 
-supports TV ball colors as well as standard ball colors see screenshots below:
+supports TV ball colors as well as standard ball colors <i>(see screenshots below)</i>
 <hr>
 <b>USE:</b><br> 
 click on balls in dock to remove them from overlay when balls are pocketed. <br><hr>
