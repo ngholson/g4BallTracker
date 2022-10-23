@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+<script src="ballStyle.js"></script>
+<style>
+.noShow{
+	display:none;
+}
+.hide {
+	visibility:hidden;
+}
+.imgSize {
+	width:var(--bSize);
+}
+:root{ 
+	--bSize; 
+}
+.fadeInElm {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 1s linear;
+}
+.fadeOutElm {
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s 1s, opacity 1s linear;
+}
+</style>
+</head>
+<body>
+<center>
+	<table class="noShow" id="eightBallList">
+		<tr>
+			<td id="eightb1">
+			</td>
+			<td id="eightb2">
+			</td>
+			<td id="eightb3">
+			</td>
+			<td id="eightb4">
+			</td>
+			<td id="eightb5">
+			</td>
+			<td id="eightb6">
+			</td>
+			<td id="eightb7">
+			</td>
+			<td id="eightb8">
+			</td>
+			<td id="eightb9">
+			</td>
+			<td id="eightb10">
+			</td>
+			<td id="eightb11">
+			</td>
+			<td id="eightb12">
+			</td>
+			<td id="eightb13">
+			</td>
+			<td id="eightb14">
+			</td>
+			<td id="eightb15">
+			</td>
+		</tr>
+	</table>
+	<table class="noShow" id="nineBallList">
+		<tr>
+			<td id="nineb1">
+			</td>
+			<td id="nineb2">
+			</td>
+			<td id="nineb3">
+			</td>
+			<td id="nineb4">
+			</td>
+			<td id="nineb5">
+			</td>
+			<td id="nineb6">
+			</td>
+			<td id="nineb7">
+			</td>
+			<td id="nineb8">
+			</td>
+			<td id="nineb9">
+			</td>
+		</tr>
+	</table>
+	<table class="noShow" id="tenBallList">
+		<tr>
+			<td id="tenb1">
+			</td>
+			<td id="tenb2">
+			</td>
+			<td id="tenb3">
+			</td>
+			<td id="tenb4">
+			</td>
+			<td id="tenb5">
+			</td>
+			<td id="tenb6">
+			</td>
+			<td id="tenb7">
+			</td>
+			<td id="tenb8">
+			</td>
+			<td id="tenb9">
+			</td>
+			<td id="tenb10">
+			</td>
+		</tr>
+	</table>
+</center>
+
+<script>
+var game = "eight";
+document.querySelector(':root').style.setProperty('--bSize', '35px');
+const bc = new BroadcastChannel('g4-balls');
+bc.onmessage = (event) => {
+if(event.data.ball != null){
+console.log(event.data.ball);
+document.getElementById(game+"b"+event.data.ball).classList.toggle("hide");
+} 
+if(event.data.gameType != null) {
+console.log(event.data.gameType);
+showBalls(event.data.gameType);
+game = event.data.gameType;
+}
+if(event.data.ballSize != null) {
+console.log(event.data.ballSize);
+document.querySelector(':root').style.setProperty('--bSize', event.data.ballSize+"px");
+}
+if(event.data.reset != null) {
+window.location.reload();
+}
+if (event.data.hide != null) {
+if (event.data.hide == true) {
+document.getElementById(game+"BallList").classList.add("fadeOutElm");
+} else {
+document.getElementById(game+"BallList").classList.replace('fadeOutElm','fadeInElm');
+setTimeout(clearFade(), 3000); 
+}}
+
+
+} //end of bc.messages.
+
+document.getElementById(game+"BallList").classList.remove("noShow");
+
+function clearFade(){
+document.getElementById(game+"BallList").classList.remove("fadeInElm");
+}
+function showBalls(g){
+document.getElementById("eightBallList").classList.remove("noShow");
+document.getElementById("nineBallList").classList.remove("noShow");
+document.getElementById("tenBallList").classList.remove("noShow");
+document.getElementById("eightBallList").classList.add("noShow");
+document.getElementById("nineBallList").classList.add("noShow");
+document.getElementById("tenBallList").classList.add("noShow");
+document.getElementById(g+"BallList").classList.remove("noShow");
+var balls = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]; 
+if(g == "eight"){
+var gamebcount = 15;
+game = "eight";
+}
+if(g == "nine"){
+var gamebcount = 9;
+game = "nine";
+}
+if(g == "ten"){
+var gamebcount = 10;
+game = "ten";
+}
+let ballImg = "";
+for (let i = 0; i < gamebcount; i++) {
+  document.getElementById(g+"b"+balls[i]).innerHTML = "<img class='imgSize' src='./images/"+blackWhite+"/"+balls[i]+".png'>";
+}
+
+}
+
+var balls = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]; 
+if(game == "eight"){
+var gamebcount = 15;
+}
+if(game == "nine"){
+var gamebcount = 9;
+}
+if(game == "ten"){
+var gamebcount = 10;
+}
+let ballImg = "";
+for (let i = 0; i < gamebcount; i++) {
+  document.getElementById(game+"b"+balls[i]).innerHTML = "<img class='imgSize' src='./images/"+blackWhite+"/"+balls[i]+".png'>";
+}
+
+
+
+</script>
+
+</body>
+</html>

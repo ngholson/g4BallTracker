@@ -1,0 +1,1 @@
+var blackWhite = "black";		// change this to "white" for standard ball colors
