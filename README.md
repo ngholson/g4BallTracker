@@ -1,4 +1,4 @@
-# Track balls remaing on pool table -  for OBS pool streamers
+# Track balls remaing on pool table<br>for OBS pool streamers
 
 [Download Here](https://github.com/ngholson/g4BallMinder/archive/refs/heads/main.zip)<hr>
 
