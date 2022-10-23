@@ -1,1 +1,3 @@
-var blackWhite = "black";		// change this to "white" for standard ball colors
+var blackWhite = "black";		// Ball color setting
+                            // "black" = Aramith Black Tournament Balls
+                            // "white" = Standard Ball Colors
