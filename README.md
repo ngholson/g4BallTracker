@@ -13,9 +13,11 @@ supports TV ball colors as well as standard ball colors see screenshots below:
 click on balls in dock to remove them from overlay when balls are pocketed. <br><hr>
 
 <b>SETUP:</b><br>
-open `ballStyle.js` in any text editor and change the variable to suit your ball color prefrence.<br>
-Add a new `Custom Browser Dock` in OBS, point this to the `control-panel.html` file in this download.<br>
-Next, add a new `Browser` source to the desired scene. and your done. <br>
+`1` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;open `ballStyle.js` in any text editor and change the variable to suit your ball color prefrence.<br>
+`2` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add a new `Custom Browser Dock` in OBS, point this to the `control-panel.html` file in this download.<br>
+`3` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add a new `Browser` source to the your scene. changing the URL to the path of `browser-source.html` included in this download.<br>
+
+
 <sub>(a better setup guide and wiki will come soon)</sub><hr>
 
 <sub>screenshots shown include [g4ScoreBoard](https://github.com/ngholson/g4ScoreBoard/)</sub>
