@@ -1,4 +1,9 @@
 <!doctype html>
+<!-- 
+g4BallMinder v1.0 alpha. 
+Simple tool to keep track of which balls are still in play during a pool game
+Copyright 2022 Norman Hamilton Gholson IV 
+-->
 <html>
 <head>
 <script src="ballStyle.js"></script>
@@ -115,18 +120,17 @@
 var game = "eight";
 document.querySelector(':root').style.setProperty('--bSize', '35px');
 const bc = new BroadcastChannel('g4-balls');
+
+//start of bc messages
 bc.onmessage = (event) => {
 if(event.data.ball != null){
-console.log(event.data.ball);
 document.getElementById(game+"b"+event.data.ball).classList.toggle("hide");
 } 
 if(event.data.gameType != null) {
-console.log(event.data.gameType);
 showBalls(event.data.gameType);
 game = event.data.gameType;
 }
 if(event.data.ballSize != null) {
-console.log(event.data.ballSize);
 document.querySelector(':root').style.setProperty('--bSize', event.data.ballSize+"px");
 }
 if(event.data.reset != null) {
@@ -140,11 +144,9 @@ document.getElementById(game+"BallList").classList.replace('fadeOutElm','fadeInE
 setTimeout(clearFade(), 3000); 
 }}
 
-
-} //end of bc.messages.
-
-document.getElementById(game+"BallList").classList.remove("noShow");
-
+}
+//end of bc.messages.
+ 
 function clearFade(){
 document.getElementById(game+"BallList").classList.remove("fadeInElm");
 }
@@ -157,43 +159,21 @@ document.getElementById("nineBallList").classList.add("noShow");
 document.getElementById("tenBallList").classList.add("noShow");
 document.getElementById(g+"BallList").classList.remove("noShow");
 var balls = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]; 
-if(g == "eight"){
-var gamebcount = 15;
-game = "eight";
-}
-if(g == "nine"){
-var gamebcount = 9;
-game = "nine";
-}
-if(g == "ten"){
-var gamebcount = 10;
-game = "ten";
-}
+if(g == "eight"){var gamebcount = 15;game = "eight";}
+if(g == "nine"){var gamebcount = 9;game = "nine";}
+if(g == "ten"){var gamebcount = 10;game = "ten";}
 let ballImg = "";
-for (let i = 0; i < gamebcount; i++) {
-  document.getElementById(g+"b"+balls[i]).innerHTML = "<img class='imgSize' src='./images/"+blackWhite+"/"+balls[i]+".png'>";
+for (let i = 0; i < gamebcount; i++) {document.getElementById(g+"b"+balls[i]).innerHTML = "<img class='imgSize' src='./images/"+blackWhite+"/"+balls[i]+".png'>";}
 }
 
-}
-
+// auto start processes.
+document.getElementById(game+"BallList").classList.remove("noShow");
 var balls = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]; 
-if(game == "eight"){
-var gamebcount = 15;
-}
-if(game == "nine"){
-var gamebcount = 9;
-}
-if(game == "ten"){
-var gamebcount = 10;
-}
-let ballImg = "";
-for (let i = 0; i < gamebcount; i++) {
-  document.getElementById(game+"b"+balls[i]).innerHTML = "<img class='imgSize' src='./images/"+blackWhite+"/"+balls[i]+".png'>";
-}
-
-
-
+if(game == "eight"){var gamebcount = 15;}
+if(game == "nine"){var gamebcount = 9;}
+if(game == "ten"){var gamebcount = 10;}
+let ballImg = "";for (let i = 0; i < gamebcount; i++) {document.getElementById(game+"b"+balls[i]).innerHTML = "<img class='imgSize' src='./images/"+blackWhite+"/"+balls[i]+".png'>";}
+// end of startup processing. 
 </script>
-
 </body>
 </html>
