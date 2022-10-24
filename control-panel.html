@@ -123,10 +123,10 @@ document.getElementById("hideBtn").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;Hide&nbs
 let p1score = localStorage.getItem("p1ScoreCtrlPanel");
 let p2score = localStorage.getItem("p2ScoreCtrlPanel");
 let ptotal = parseInt(p1score) + parseInt(p2score);
-console.log(ptotal);
 bcHook.onmessage = (event) => {
 if(event.data.score != null) {
 setTimeout( function(){
+if (event.data.score != 0){
 let p1scoreR = localStorage.getItem("p1ScoreCtrlPanel");
 let p2scoreR = localStorage.getItem("p2ScoreCtrlPanel");
 let ptotalR = parseInt(p1scoreR) + parseInt(p2scoreR);
@@ -135,9 +135,15 @@ ptotal = ptotal++;
 bc.postMessage({reset: true});
 window.location.reload();
 }
-ptotal = ptotalR;  },500);
-
-console.log("new ptotal: "+ptotal);
+ptotal = ptotalR;
+} else { 
+if (localStorage.getItem("p1ScoreCtrlPanel") == 0 && localStorage.getItem("p2ScoreCtrlPanel") == 0){
+ptotal = 0;
+bc.postMessage({reset: true});
+window.location.reload();
+}
+}
+},500);
 }
 }
 
