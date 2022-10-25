@@ -2,7 +2,7 @@
 <!-- 
 g4BallMinder v1.0 
 Simple tool to keep track of which balls are still in play during a pool game
-Copyright 2022 Norman Gholson IV.
+Copyright 2022 Norman Gholson IV 
 -->
 <html>
 <head>
@@ -124,7 +124,7 @@ const bc = new BroadcastChannel('g4-balls');
 //start of bc messages
 bc.onmessage = (event) => {
 if(event.data.ball != null){
-document.getElementById(game+"b"+event.data.ball).classList.toggle("hide");
+document.getElementById(game+"b"+event.data.ball).classList.toggle("hide"); // change this to noShow to make balls fill gaps when 1 is removed.
 } 
 if(event.data.gameType != null) {
 showBalls(event.data.gameType);
@@ -140,16 +140,12 @@ if (event.data.hide != null) {
 if (event.data.hide == true) {
 document.getElementById(game+"BallList").classList.add("fadeOutElm");
 } else {
-document.getElementById(game+"BallList").classList.replace('fadeOutElm','fadeInElm');
-setTimeout(clearFade(), 3000); 
+document.getElementById(game+"BallList").classList.replace("fadeOutElm","fadeInElm");
 }}
 
 }
 //end of bc.messages.
- 
-function clearFade(){
-document.getElementById(game+"BallList").classList.remove("fadeInElm");
-}
+
 function showBalls(g){
 document.getElementById("eightBallList").classList.remove("noShow");
 document.getElementById("nineBallList").classList.remove("noShow");
