@@ -1,6 +1,6 @@
 var blackWhite = "black";		
 // Ball color setting
-// "black" = Aramith Black Tournament Balls
+// "black" = TV Tournament ball colors with black stripe
 // "white" = TV Tournament ball colors with white stripe
 // "standard" = Standard ball colors
 //
