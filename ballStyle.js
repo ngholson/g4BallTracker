@@ -1,8 +1,9 @@
 var blackWhite = "black";		
 // Ball color setting
 // "black" = Aramith Black Tournament Balls
-// "white" = Standard Ball Colors
-// 
+// "white" = TV Tournament ball colors with white stripe
+// "standard" = Standard ball colors
+//
 // you can make your own, 
 // create a new folder inside the images folder
 // same your images numbered 1-15 as PNG
