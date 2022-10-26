@@ -8,13 +8,14 @@ Copyright 2022 Norman Gholson IV
 <head>
 <script src="ballStyle.js"></script>
 <style>
-#hideBtn, #reset, #gametype, #ballSize, #ballColorStyle {
+#hideBtn, #reset, #gametype, #ballSize {
 	background: #3c40bb;
 	color: lightgrey;
 	border:0px;
 	height:20px;
 	font-size:8pt;
 	border-radius:5px;
+	width: 55px;
 }
 #footer{
 	color: dimgrey;
@@ -47,7 +48,7 @@ hr {
 <div id="bottom"><hr>
 <center>
 <select onchange="gameSelect(this.value)" name="game" id="gametype">
-<option value="eight">Eight&nbsp;&nbsp;&nbsp;&nbsp;</option>
+<option value="eight">Eight</option>
 <option value="nine">Nine</option>
 <option value="ten">Ten</option>
 </select><hr>
@@ -56,9 +57,9 @@ hr {
 <option value=45>Medium</option>
 <option value=55>Large</option>
 </select><hr>
-<button id="hideBtn" onclick="hideMe()">&nbsp;&nbsp;&nbsp;&nbsp;Hide&nbsp;&nbsp;&nbsp;&nbsp;</button>
+<button id="hideBtn" onclick="hideMe()">Hide</button>
 <hr>
-<button id="reset" onclick="resetMe()">&nbsp;&nbsp;&nbsp;Reset&nbsp;&nbsp;&nbsp;</button>
+<button id="reset" onclick="resetMe()">Reset</button>
 <hr><pre id="footer">g4BallMinder<br>v1.0</pre>
 </center>
 <div>
@@ -111,14 +112,14 @@ window.location.reload();
 }
 var ya;
 function hideMe(){
-if (document.getElementById("hideBtn").innerHTML == "&nbsp;&nbsp;&nbsp;&nbsp;Hide&nbsp;&nbsp;&nbsp;&nbsp;"){
+if (document.getElementById("hideBtn").innerHTML == "Hide"){
 ya = 1;
 bc.postMessage({hide: true});
-document.getElementById("hideBtn").innerHTML = "&nbsp;&nbsp;&nbsp;Show&nbsp;&nbsp;&nbsp;";
+document.getElementById("hideBtn").innerHTML = "Show";
 } else {
 ya = 2;
 bc.postMessage({hide: false});
-document.getElementById("hideBtn").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;Hide&nbsp;&nbsp;&nbsp;&nbsp;";
+document.getElementById("hideBtn").innerHTML = "Hide";
  }
 }
 
@@ -151,11 +152,11 @@ window.location.reload();
 
 bcr.onmessage = (event) => {
 if (event.data.showhide == 0) {
-document.getElementById("hideBtn").innerHTML = "&nbsp;&nbsp;&nbsp;Show&nbsp;&nbsp;&nbsp;";
+document.getElementById("hideBtn").innerHTML = "Show";
 } 
 if (ya != 1) {
 if (event.data.showhide != 0) {
-document.getElementById("hideBtn").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;Hide&nbsp;&nbsp;&nbsp;&nbsp;";
+document.getElementById("hideBtn").innerHTML = "Hide";
 }
 }
 }
