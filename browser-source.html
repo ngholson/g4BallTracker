@@ -164,7 +164,7 @@ document.getElementById("tenBallList").classList.remove("noShow");
 document.getElementById("eightBallList").classList.add("noShow");
 document.getElementById("nineBallList").classList.add("noShow");
 document.getElementById("tenBallList").classList.add("noShow");
-document.getElementById(g+"BallList").classList.remove("noShow");
+document.getElementById(g+"BallList").classList.replace("noShow", "fadeInElm");
 var balls = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]; 
 if(g == "eight"){var gamebcount = 15;game = "eight";}
 if(g == "nine"){var gamebcount = 9;game = "nine";}
