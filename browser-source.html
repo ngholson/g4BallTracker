@@ -120,6 +120,14 @@ Copyright 2022 Norman Gholson IV
 var game = "eight";
 document.querySelector(':root').style.setProperty('--bSize', '35px');
 const bc = new BroadcastChannel('g4-balls');
+const bcb = new BroadcastChannel('g4-main');
+
+bcb.onmessage = (event) => {
+if (event.data.opacity != null){
+document.getElementById(game+"BallList").classList.remove("noShow");
+document.getElementById(game+"BallList").style.opacity  = event.data.opacity;
+}
+}
 
 //start of bc messages
 bc.onmessage = (event) => {
@@ -138,10 +146,13 @@ window.location.reload();
 }
 if (event.data.hide != null) {
 if (event.data.hide == true) {
+document.getElementById(game+"BallList").style.removeProperty('opacity');
 document.getElementById(game+"BallList").classList.add("fadeOutElm");
 } else {
+document.getElementById(game+"BallList").style.removeProperty('opacity');
 document.getElementById(game+"BallList").classList.replace("fadeOutElm","fadeInElm");
 }}
+
 
 }
 //end of bc.messages.
