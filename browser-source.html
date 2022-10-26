@@ -121,11 +121,14 @@ var game = "eight";
 document.querySelector(':root').style.setProperty('--bSize', '35px');
 const bc = new BroadcastChannel('g4-balls');
 const bcb = new BroadcastChannel('g4-main');
+const bcr = new BroadcastChannel('g4-rxballs');
 
 bcb.onmessage = (event) => {
 if (event.data.opacity != null){
 document.getElementById(game+"BallList").classList.remove("noShow");
 document.getElementById(game+"BallList").style.opacity  = event.data.opacity;
+bcr.postMessage({showhide: event.data.opacity});
+
 }
 }
 
