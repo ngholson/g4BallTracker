@@ -109,12 +109,14 @@ function resetMe() {
 bc.postMessage({reset: true});
 window.location.reload();
 }
-
+var ya;
 function hideMe(){
 if (document.getElementById("hideBtn").innerHTML == "&nbsp;&nbsp;&nbsp;&nbsp;Hide&nbsp;&nbsp;&nbsp;&nbsp;"){
+ya = 1;
 bc.postMessage({hide: true});
 document.getElementById("hideBtn").innerHTML = "&nbsp;&nbsp;&nbsp;Show&nbsp;&nbsp;&nbsp;";
 } else {
+ya = 2;
 bc.postMessage({hide: false});
 document.getElementById("hideBtn").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;Hide&nbsp;&nbsp;&nbsp;&nbsp;";
  }
@@ -151,11 +153,12 @@ bcr.onmessage = (event) => {
 if (event.data.showhide == 0) {
 document.getElementById("hideBtn").innerHTML = "&nbsp;&nbsp;&nbsp;Show&nbsp;&nbsp;&nbsp;";
 } 
+if (ya != 1) {
 if (event.data.showhide != 0) {
 document.getElementById("hideBtn").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;Hide&nbsp;&nbsp;&nbsp;&nbsp;";
 }
 }
-
+}
 </script>
 </body>
 </html>
