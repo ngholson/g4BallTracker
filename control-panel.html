@@ -123,15 +123,15 @@ document.getElementById("hideBtn").innerHTML = "Hide";
  }
 }
 
-let p1score = localStorage.getItem("p1ScoreCtrlPanel");
-let p2score = localStorage.getItem("p2ScoreCtrlPanel");
+if (localStorage.getItem("p1ScoreCtrlPanel") != null) {var p1score = localStorage.getItem("p1ScoreCtrlPanel");} else { var p1score = 0; };
+if (localStorage.getItem("p2ScoreCtrlPanel") != null) {var p2score = localStorage.getItem("p2ScoreCtrlPanel");} else { var p2score = 0; };
 let ptotal = parseInt(p1score) + parseInt(p2score);
 bcHook.onmessage = (event) => {
 if(event.data.score != null) {
 setTimeout( function(){
 if (event.data.score != 0){
-let p1scoreR = localStorage.getItem("p1ScoreCtrlPanel");
-let p2scoreR = localStorage.getItem("p2ScoreCtrlPanel");
+if (localStorage.getItem("p1ScoreCtrlPanel") != null) {var p1scoreR = localStorage.getItem("p1ScoreCtrlPanel");} else { var p1scoreR = 0; };
+if (localStorage.getItem("p2ScoreCtrlPanel") != null) {var p2scoreR = localStorage.getItem("p2ScoreCtrlPanel");} else { var p2scoreR = 0; };
 let ptotalR = parseInt(p1scoreR) + parseInt(p2scoreR);
 if (ptotalR > ptotal) {
 ptotal = ptotal++;
