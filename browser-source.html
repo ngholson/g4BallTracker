@@ -61,14 +61,13 @@ if (event.data.opacity != null){
 document.getElementById(game+"BallList").classList.remove("noShow");
 document.getElementById(game+"BallList").style.opacity  = event.data.opacity;
 bcr.postMessage({showhide: event.data.opacity});
-
 }
 }
 
 //start of bc messages
 bc.onmessage = (event) => {
 if(event.data.ball != null){
-document.getElementById(game+"b"+event.data.ball).classList.toggle("hide"); // change this to noShow to make balls fill gaps when 1 is removed.
+document.getElementById(game+"b"+event.data.ball).classList.toggle("hide"); // change this to "noShow" to make balls fill gaps when 1 is removed.
 } 
 if(event.data.gameType != null) {
 showBalls(event.data.gameType);
@@ -98,7 +97,6 @@ document.getElementById("eightBallList").classList.add("noShow");
 document.getElementById("nineBallList").classList.add("noShow");
 document.getElementById("tenBallList").classList.add("noShow");
 document.getElementById(g+"BallList").classList.replace("noShow", "fadeInElm");
-var balls = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]; 
 if(g == "eight"){var gamebcount = 15;game = "eight";}
 if(g == "nine"){var gamebcount = 9;game = "nine";}
 if(g == "ten"){var gamebcount = 10;game = "ten";}
@@ -112,7 +110,8 @@ var balls = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"
 if(game == "eight"){var gamebcount = 15;}
 if(game == "nine"){var gamebcount = 9;}
 if(game == "ten"){var gamebcount = 10;}
-let ballImg = "";for (let i = 0; i < gamebcount; i++) {document.getElementById(game+"b"+balls[i]).innerHTML = "<img class='imgSize' src='./images/"+blackWhite+"/"+balls[i]+".png'>";}
+let ballImg = "";
+for (let i = 0; i < gamebcount; i++) {document.getElementById(game+"b"+balls[i]).innerHTML = "<img class='imgSize' src='./images/"+blackWhite+"/"+balls[i]+".png'>";}
 // end of startup processing. 
 
 </script>
