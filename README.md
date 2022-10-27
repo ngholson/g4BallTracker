@@ -21,7 +21,7 @@ Click on balls in dock to remove them from overlay when balls are pocketed. <br>
 
 
 <b>SETUP:</b><br>
-`1` &nbsp;&nbsp;&nbsp;open `ballStyle.js` in any text editor and change the variable to suit your ball color prefrence.<br>
+`1` &nbsp;&nbsp;&nbsp;open `config.js` in any text editor and change the variable to suit your ball color prefrence.<br>
 `2` &nbsp;&nbsp;&nbsp;Add a new `Custom Browser Dock` in OBS, point this to the `control-panel.html` file in this download.<br>
 `3` &nbsp;&nbsp;&nbsp;Add a new `Browser` source to your scene. change the URL the the path of `browser-source.html`.<br>
 
