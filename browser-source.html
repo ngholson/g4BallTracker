@@ -18,7 +18,7 @@ Copyright 2022 Norman Gholson IV
 	width:var(--bSize);
 }
 :root{ 
-	--bSize: 35; 
+	--bSize: 35px; 
 }
 .fadeInElm {
 	visibility: visible;
@@ -46,7 +46,6 @@ Copyright 2022 Norman Gholson IV
 <span id="mainDisplay" class="bottom"></span>
 <script>
 var game = "eight";
-document.querySelector(':root').style.setProperty('--bSize', '35px');
 const bc = new BroadcastChannel('g4-balls');
 const bcb = new BroadcastChannel('g4-main');
 const bcr = new BroadcastChannel('g4-rxballs');
