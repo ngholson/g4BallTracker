@@ -11,7 +11,7 @@ var blackWhite = "black";
 
 
 
-// below here is still experimental results may vary. 
+// below here is still experimental, results may vary. 
 // changes ball alignment on stream output
 var position = "horizontal";		// options are "vertical" or "horizontal"
 var leftRight = "left";				// left or right (applies to vertical position)
