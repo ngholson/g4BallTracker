@@ -65,7 +65,11 @@ bcr.postMessage({showhide: event.data.opacity});
 //start of bc messages
 bc.onmessage = (event) => {
 if(event.data.ball != null){
-document.getElementById(game+"b"+event.data.ball).classList.toggle("hide"); //  "hide" = static ball positions.  "noShow" = dynamic ball positions (no spaces between balls). 
+	if (staticImages == true){
+		document.getElementById(game+"b"+event.data.ball).classList.toggle("hide");
+	} else {
+		document.getElementById(game+"b"+event.data.ball).classList.toggle("noShow");
+	}
 } 
 if(event.data.gameType != null) {
 showBalls(event.data.gameType);
