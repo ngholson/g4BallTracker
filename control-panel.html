@@ -11,7 +11,7 @@ Copyright 2022 Norman Gholson IV
 #hideBtn, #reset, #gametype, #ballSize {
 	background: #3c40bb;
 	color: lightgrey;
-	border:0px;
+	border:0px; 
 	height:20px;
 	font-size:8pt;
 	border-radius:5px;
@@ -64,7 +64,13 @@ hr {
 </center>
 <div>
 <script>
+const bcr = new BroadcastChannel('g4-rxballs');
+const bcHook = new BroadcastChannel('g4-main'); // catch broadcasts from g4ScoreBoard if installed
+const bc = new BroadcastChannel('g4-balls');
+if(localStorage.getItem("bmHide") == 1){
 
+	//	setTimeout("hideMe()",1);
+}
 if(localStorage.getItem("bmGame") == "ten") {
 document.getElementById("ballsDisp").innerHTML = "<input onchange='changeBall(1)' type='checkbox' id='b1' name='b1' value='1'><label for='b1'> <img width='25px' src='./images/"+blackWhite+"/1.png'></label><br><input onchange='changeBall(2)' type='checkbox' id='b2' name='b2' value='2'><label for='b2'> <img width='25px' src='./images/"+blackWhite+"/2.png'></label><br><input onchange='changeBall(3)' type='checkbox' id='b3' name='b3' value='3'><label for='b3'> <img width='25px' src='./images/"+blackWhite+"/3.png'></label><br><input onchange='changeBall(4)' type='checkbox' id='b4' name='b4' value='4'><label for='b4'> <img width='25px' src='./images/"+blackWhite+"/4.png'></label><br><input onchange='changeBall(5)' type='checkbox' id='b5' name='b5' value='5'><label for='b5'> <img width='25px' src='./images/"+blackWhite+"/5.png'></label><br><input onchange='changeBall(6)' type='checkbox' id='b6' name='b6' value='6'><label for='b6'> <img width='25px' src='./images/"+blackWhite+"/6.png'></label><br><input onchange='changeBall(7)' type='checkbox' id='b7' name='b7' value='7'><label for='b7'> <img width='25px' src='./images/"+blackWhite+"/7.png'></label><br><input onchange='changeBall(8)' type='checkbox' id='b8' name='b8' value='8'><label for='b8'> <img width='25px' src='./images/"+blackWhite+"/8.png'></label><br><input onchange='changeBall(9)' type='checkbox' id='b9' name='b9' value='9'><label for='b9'> <img width='25px' src='./images/"+blackWhite+"/9.png'></label><br><input onchange='changeBall(10)' type='checkbox' id='b10' name='b10' value='10'><label for='b10'> <img width='25px' src='./images/"+blackWhite+"/10.png'></label><br><input class='hide' onchange='changeBall(11)' type='checkbox' id='b11' name='b11' value='11'><label  class='hide' for='b11'> <img width='25px' src='./images/"+blackWhite+"/11.png'></label><br><input class='hide' onchange='changeBall(12)' type='checkbox' id='b12' name='b12' value='12'><label class='hide' for='b12'> <img width='25px' src='./images/"+blackWhite+"/12.png'></label><br><input class='hide' onchange='changeBall(13)' type='checkbox' id='b13' name='b13' value='13'><label class='hide' for='b13'> <img width='25px' src='./images/"+blackWhite+"/13.png'></label><br><input class='hide' onchange='changeBall(14)' type='checkbox' id='b14' name='b14' value='14'><label class='hide' for='b14'> <img width='25px' src='./images/"+blackWhite+"/14.png'></label><br><input class='hide' onchange='changeBall(15)' type='checkbox' id='b15' name='b15' value='15'><label class='hide' for='b15'> <img width='25px' src='./images/"+blackWhite+"/15.png'></label>";
 } else {
@@ -73,9 +79,7 @@ document.getElementById("ballsDisp").innerHTML = "<input onchange='changeBall(1)
 } else {
 document.getElementById("ballsDisp").innerHTML = "<input onchange='changeBall(1)' type='checkbox' id='b1' name='b1' value='1'><label for='b1'> <img width='25px' src='./images/"+blackWhite+"/1.png'></label><br><input onchange='changeBall(2)' type='checkbox' id='b2' name='b2' value='2'><label for='b2'> <img width='25px' src='./images/"+blackWhite+"/2.png'></label><br><input onchange='changeBall(3)' type='checkbox' id='b3' name='b3' value='3'><label for='b3'> <img width='25px' src='./images/"+blackWhite+"/3.png'></label><br><input onchange='changeBall(4)' type='checkbox' id='b4' name='b4' value='4'><label for='b4'> <img width='25px' src='./images/"+blackWhite+"/4.png'></label><br><input onchange='changeBall(5)' type='checkbox' id='b5' name='b5' value='5'><label for='b5'> <img width='25px' src='./images/"+blackWhite+"/5.png'></label><br><input onchange='changeBall(6)' type='checkbox' id='b6' name='b6' value='6'><label for='b6'> <img width='25px' src='./images/"+blackWhite+"/6.png'></label><br><input onchange='changeBall(7)' type='checkbox' id='b7' name='b7' value='7'><label for='b7'> <img width='25px' src='./images/"+blackWhite+"/7.png'></label><br><input onchange='changeBall(8)' type='checkbox' id='b8' name='b8' value='8'><label for='b8'> <img width='25px' src='./images/"+blackWhite+"/8.png'></label><br><input onchange='changeBall(9)' type='checkbox' id='b9' name='b9' value='9'><label for='b9'> <img width='25px' src='./images/"+blackWhite+"/9.png'></label><br><input onchange='changeBall(10)' type='checkbox' id='b10' name='b10' value='10'><label for='b10'> <img width='25px' src='./images/"+blackWhite+"/10.png'></label><br><input onchange='changeBall(11)' type='checkbox' id='b11' name='b11' value='11'><label for='b11'> <img width='25px' src='./images/"+blackWhite+"/11.png'></label><br><input onchange='changeBall(12)' type='checkbox' id='b12' name='b12' value='12'><label for='b12'> <img width='25px' src='./images/"+blackWhite+"/12.png'></label><br><input onchange='changeBall(13)' type='checkbox' id='b13' name='b13' value='13'><label for='b13'> <img width='25px' src='./images/"+blackWhite+"/13.png'></label><br><input onchange='changeBall(14)' type='checkbox' id='b14' name='b14' value='14'><label for='b14'> <img width='25px' src='./images/"+blackWhite+"/14.png'></label><br><input onchange='changeBall(15)' type='checkbox' id='b15' name='b15' value='15'><label for='b15'> <img width='25px' src='./images/"+blackWhite+"/15.png'></label>";
 }}
-const bcr = new BroadcastChannel('g4-rxballs');
-const bcHook = new BroadcastChannel('g4-main'); // catch broadcasts from g4ScoreBoard if installed
-const bc = new BroadcastChannel('g4-balls');
+
 if (localStorage.getItem("bmSize") != null){
 document.getElementById("ballSize").value = localStorage.getItem("bmSize");
 bc.postMessage({ballSize: localStorage.getItem("bmSize")});
@@ -114,10 +118,12 @@ var ya;
 function hideMe(){
 if (document.getElementById("hideBtn").innerHTML == "Hide"){
 ya = 1;
+localStorage.setItem("bmHide", 1);
 bc.postMessage({hide: true});
 document.getElementById("hideBtn").innerHTML = "Show";
 } else {
 ya = 0;
+localStorage.setItem("bmHide", 0);
 bc.postMessage({hide: false});
 document.getElementById("hideBtn").innerHTML = "Hide";
  }
@@ -126,7 +132,9 @@ document.getElementById("hideBtn").innerHTML = "Hide";
 if (localStorage.getItem("p1ScoreCtrlPanel") != null) {var p1score = localStorage.getItem("p1ScoreCtrlPanel");} else { var p1score = 0; };
 if (localStorage.getItem("p2ScoreCtrlPanel") != null) {var p2score = localStorage.getItem("p2ScoreCtrlPanel");} else { var p2score = 0; };
 let ptotal = parseInt(p1score) + parseInt(p2score);
+
 bcHook.onmessage = (event) => {
+	if(localStorage.getItem("bmHide") != 1){
 if(event.data.score != null) {
 setTimeout( function(){
 if (event.data.score != 0){
@@ -149,7 +157,7 @@ window.location.reload();
 },500);
 }
 }
-
+}
 bcr.onmessage = (event) => {
 if (event.data.showhide == 0) {
 document.getElementById("hideBtn").innerHTML = "Show";
