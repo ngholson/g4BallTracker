@@ -39,7 +39,6 @@ Copyright 2022 Norman Gholson IV
 	position: absolute;
 	bottom:10px;
 }
-
 </style>
 </head>
 <body>
@@ -66,7 +65,7 @@ bcr.postMessage({showhide: event.data.opacity});
 //start of bc messages
 bc.onmessage = (event) => {
 if(event.data.ball != null){
-document.getElementById(game+"b"+event.data.ball).classList.toggle("hide"); // change this to "noShow" to make balls fill gaps when 1 is removed.
+document.getElementById(game+"b"+event.data.ball).classList.toggle("hide"); //  "hide" = static ball positions.  "noShow" = dynamic ball positions (no spaces between balls). 
 } 
 if(event.data.gameType != null) {
 showBalls(event.data.gameType);
