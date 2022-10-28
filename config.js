@@ -5,7 +5,7 @@
 //
 // you can make your own, 
 // create a new folder inside the images folder
-// name your images numbered 1-15 as PNG
+// name your images numbered 1-15 in .PNG format
 // and change this to the new folder name. 
 var blackWhite = "black";	// "black", "white", "standard"
 
