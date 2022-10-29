@@ -14,5 +14,5 @@ var blackWhite = "black";	// "black", "white", "standard"
 // below here is still experimental, results may vary. 
 // changes ball alignment on stream output
 var position = "horizontal";		// options are "vertical" or "horizontal"
-var leftRight = "left";				// left or right (applies to vertical position)
+var leftRight = "right";				// left or right (applies to vertical position)
 var staticImages = true;            // true = ball images are staticly positioned. false = dynamic ball position (no spaces between balls when a ball is removed)

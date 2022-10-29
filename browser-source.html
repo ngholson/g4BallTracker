@@ -36,7 +36,7 @@ Copyright 2022 Norman Gholson IV
 			opacity: 0;
 			transition: visibility 0s 1s, opacity 1s linear;
 		}
-
+		
 		.left {
 			position: absolute;
 			bottom: 10px;
@@ -58,6 +58,7 @@ Copyright 2022 Norman Gholson IV
 		const bcb = new BroadcastChannel('g4-main');
 		const bcr = new BroadcastChannel('g4-rxballs');
 		if (position == "vertical") {
+			document.getElementById("mainDisplay").classList.add("left");
 			document.getElementById("mainDisplay").innerHTML = "<table class='noShow' id='eightBallList'> <tr> <td id='eightb1'> </td> </tr> <tr> <td id='eightb2'> </td> </tr> <tr> <td id='eightb3'> </td> </tr> <tr> <td id='eightb4'> </td> </tr> <tr> <td id='eightb5'> </td> </tr> <tr> <td id='eightb6'> </td> </tr> <tr> <td id='eightb7'> </td> </tr> <tr> <td id='eightb8'> </td> </tr> <tr> <td id='eightb9'> </td> </tr> <tr> <td id='eightb10'> </td> </tr> <tr> <td id='eightb11'> </td> </tr> <tr> <td id='eightb12'> </td> </tr> <tr> <td id='eightb13'> </td> </tr> <tr> <td id='eightb14'> </td> </tr> <tr> <td id='eightb15'> </td> </tr> </table> <table class='noShow' id='nineBallList'> <tr> <td id='nineb1'> </td> </tr> <tr> <td id='nineb2'> </td> </tr> <tr> <td id='nineb3'> </td> </tr> <tr> <td id='nineb4'> </td> </tr> <tr> <td id='nineb5'> </td> </tr> <tr> <td id='nineb6'> </td> </tr> <tr> <td id='nineb7'> </td> </tr> <tr> <td id='nineb8'> </td> </tr> <tr> <td id='nineb9'> </td> </tr> </table> <table class='noShow' id='tenBallList'> <tr> <td id='tenb1'> </td> </tr> <tr> <td id='tenb2'> </td> </tr> <tr> <td id='tenb3'> </td> </tr> <tr> <td id='tenb4'> </td> </tr> <tr> <td id='tenb5'> </td> </tr> <tr> <td id='tenb6'> </td> </tr> <tr> <td id='tenb7'> </td> </tr> <tr> <td id='tenb8'> </td> </tr> <tr> <td id='tenb9'> </td> </tr> <tr> <td id='tenb10'> </td> </tr> </table>";
 		} else {
 			document.getElementById("mainDisplay").innerHTML = "<center> <table class='noShow' id='eightBallList'> <tr> <td id='eightb1'> </td> <td id='eightb2'> </td> <td id='eightb3'> </td> <td id='eightb4'> </td> <td id='eightb5'> </td> <td id='eightb6'> </td> <td id='eightb7'> </td> <td id='eightb8'> </td> <td id='eightb9'> </td> <td id='eightb10'> </td> <td id='eightb11'> </td> <td id='eightb12'> </td> <td id='eightb13'> </td> <td id='eightb14'> </td> <td id='eightb15'> </td> </tr> </table> <table class='noShow' id='nineBallList'> <tr> <td id='nineb1'> </td> <td id='nineb2'> </td> <td id='nineb3'> </td> <td id='nineb4'> </td> <td id='nineb5'> </td> <td id='nineb6'> </td> <td id='nineb7'> </td> <td id='nineb8'> </td> <td id='nineb9'> </td> </tr> </table> <table class='noShow' id='tenBallList'> <tr> <td id='tenb1'> </td> <td id='tenb2'> </td> <td id='tenb3'> </td> <td id='tenb4'> </td> <td id='tenb5'> </td> <td id='tenb6'> </td> <td id='tenb7'> </td> <td id='tenb8'> </td> <td id='tenb9'> </td> <td id='tenb10'> </td> </tr> </table> </center>";
