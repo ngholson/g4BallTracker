@@ -55,7 +55,7 @@ Copyright 2022 Norman Gholson IV
 	<script>
 		var game = "eight";
 		const bc = new BroadcastChannel('g4-balls');
-		const bcb = new BroadcastChannel('g4-main');
+		const bcb = new BroadcastChannel('g4-main'); // catch broadcasts from g4ScoreBoard if installed
 		const bcr = new BroadcastChannel('g4-rxballs');
 		if (position == "vertical") {
 			document.getElementById("mainDisplay").classList.add(leftRight);
@@ -63,6 +63,8 @@ Copyright 2022 Norman Gholson IV
 		} else {
 			document.getElementById("mainDisplay").innerHTML = "<center> <table class='noShow' id='eightBallList'> <tr> <td id='eightb1'> </td> <td id='eightb2'> </td> <td id='eightb3'> </td> <td id='eightb4'> </td> <td id='eightb5'> </td> <td id='eightb6'> </td> <td id='eightb7'> </td> <td id='eightb8'> </td> <td id='eightb9'> </td> <td id='eightb10'> </td> <td id='eightb11'> </td> <td id='eightb12'> </td> <td id='eightb13'> </td> <td id='eightb14'> </td> <td id='eightb15'> </td> </tr> </table> <table class='noShow' id='nineBallList'> <tr> <td id='nineb1'> </td> <td id='nineb2'> </td> <td id='nineb3'> </td> <td id='nineb4'> </td> <td id='nineb5'> </td> <td id='nineb6'> </td> <td id='nineb7'> </td> <td id='nineb8'> </td> <td id='nineb9'> </td> </tr> </table> <table class='noShow' id='tenBallList'> <tr> <td id='tenb1'> </td> <td id='tenb2'> </td> <td id='tenb3'> </td> <td id='tenb4'> </td> <td id='tenb5'> </td> <td id='tenb6'> </td> <td id='tenb7'> </td> <td id='tenb8'> </td> <td id='tenb9'> </td> <td id='tenb10'> </td> </tr> </table> </center>";
 		}
+
+		//  catch broadcasts from g4ScoreBoard if installed
 		bcb.onmessage = (event) => {
 			if (event.data.opacity != null) {
 				document.getElementById(game + "BallList").classList.remove("noShow");
@@ -70,6 +72,7 @@ Copyright 2022 Norman Gholson IV
 				bcr.postMessage({ showhide: event.data.opacity });
 			}
 		}
+		// end of g4ScoreBoard broadcast messages
 
 		//start of bc messages
 		bc.onmessage = (event) => {
@@ -99,8 +102,6 @@ Copyright 2022 Norman Gholson IV
 					document.getElementById(game + "BallList").classList.replace("fadeOutElm", "fadeInElm");
 				}
 			}
-
-
 		}
 		//end of bc.messages.
 
