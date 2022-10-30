@@ -2,7 +2,7 @@
 
 # Keep track of balls remaing on pool table<br>A custom dock for OBS pool streamers
 
-## [Download Here](https://github.com/ngholson/g4BallMinder/archive/refs/heads/main.zip)<hr>
+## [Download Here](https://github.com/ngholson/g4BallTracker/archive/refs/heads/main.zip)<hr>
 
 
 Keep track of balls left on table - an OBS overlay and Dock for pool streamers
