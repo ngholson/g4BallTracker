@@ -53,7 +53,7 @@ Copyright 2022 Norman Gholson IV
 <body>
 	<span id="mainDisplay" class="bottom"></span>
 	<script>
-		game = "eight"; // default game for initial load.
+		var game = "eight"; // default game for initial load.
 		const bc = new BroadcastChannel('g4-balls');
 		const bcb = new BroadcastChannel('g4-main'); // catch broadcasts from g4ScoreBoard if installed
 		const bcr = new BroadcastChannel('g4-rxballs');
