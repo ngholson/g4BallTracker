@@ -100,8 +100,6 @@ Copyright 2022 Norman Gholson IV
 				if (localStorage.getItem("bmGame") != null) {
 					document.getElementById("gametype").value = localStorage.getItem("bmGame");
 					bc.postMessage({ gameType: localStorage.getItem("bmGame") });
-				} else {
-					bc.postMessage({gameType: "eight"});
 				}
 
 				function changeBall(ball) {
