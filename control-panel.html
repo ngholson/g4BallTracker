@@ -37,14 +37,6 @@ Copyright 2022 Norman Gholson IV
 			border-right: 0px;
 		}
 
-		#bottom {
-			width: 72px;
-			position: relative;
-			bottom: 0px;
-			margin: auto;
-			vertical-align: bottom;
-		}
-
 		.hide {
 			visibility: hidden;
 		}
@@ -55,7 +47,6 @@ Copyright 2022 Norman Gholson IV
 	<center>
 		<main id="ballsDisp"></main>
 	</center>
-	<div id="bottom">
 		<hr>
 		<center>
 			<select onchange="gameSelect(this.value)" name="game" id="gametype">
@@ -76,7 +67,6 @@ Copyright 2022 Norman Gholson IV
 			<hr>
 			<pre id="footer">g4BallTracker<br>v1.0.1</pre>
 		</center>
-		<div>
 			<script>
 				const bcr = new BroadcastChannel('g4-rxballs');
 				const bcHook = new BroadcastChannel('g4-main'); // catch broadcasts from g4ScoreBoard if installed
