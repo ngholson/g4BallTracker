@@ -16,3 +16,5 @@ var blackWhite = "black";	// "black", "white", "standard"
 var position = "horizontal";		// options are "vertical" or "horizontal"
 var leftRight = "left";				// left or right (applies to vertical position)
 var staticImages = true;            // true = ball images are staticly positioned. false = dynamic ball position (no spaces between balls when a ball is removed)
+                                    // static example:  (1)(2)      (5)(6)  (8)(9) 
+                                    // dynamic example: (1)(2)(5)(6)(8)(9)
