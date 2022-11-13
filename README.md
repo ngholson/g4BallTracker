@@ -1,33 +1,44 @@
-<img src="https://user-images.githubusercontent.com/46265156/197377220-2262276b-e348-407c-ad77-77cfa829b369.png" width="100px" align="left">
+<div align="center"><img width="70px" src="https://obsproject.com/forum/attachments/icon-png.87900/" /><br><a href="https://github.com/ngholson/g4BallTracker/archive/refs/heads/main.zip">Download Here</a><br>This is a companion product for the <a href="https://obsproject.com/forum/resources/g4scoreboard-a-pool-billiards-score-board.1586/">g4ScoreBoard</a>.<br>But can also be used as a stand alone package.</div>
 
-# Keep track of balls remaing on pool table<br>A custom dock for OBS pool streamers
+***
 
-## [Download Latest Version Here](https://github.com/ngholson/g4BallTracker/archive/refs/heads/main.zip)<hr>
+**USE:**<br>
+* Choose which game `eight` `nine` or `ten` from the list and select overlay size.
+* Click on balls in dock to remove them from overlay when balls are pocketed.
+* ```Hide``` / ```Show``` Button will hide and display the ball tracker list.
+* ```Reset``` button will reset ball icons in stream and dock.<br><br>
 
+**NOTES:**<br><br>
+If [g4ScoreBoard](https://obsproject.com/forum/resources/g4scoreboard-a-pool-billiards-score-board.1586/) is installed: 
+* [g4BallTracker](https://github.com/ngholson/g4BallTracker) will auto reset when a players score is increased, or the reset button is clicked from the g4ScoreBoard control panel.
+* Hiding the g4ScoreBoard with the opacity slider will hide the tracker as well. 
+* If Hide is enabled on the [g4BallTracker](https://github.com/ngholson/g4BallTracker) it will ignore all reset and hide/show commands from the g4ScoreBoard.<br><br>
 
-Keep track of balls left on table - an OBS overlay and Dock for pool streamers
+***
 
-A simple OBS Browser Dock and Stream overlay for pool streamers to track balls left on the table. 
+#### **SETUP:**<br>
+* Open ```config.js``` in any text editor and change to suit your preferences <i>(see below)</i>.
+* Add a new ```Custom Browser Dock``` in OBS, point this to the ```control-panel.html``` file in this download.
+* Add a new ```Browser``` source to your scene. change the URL the the path of ```browser-source.html```.<br><br>
 
-supports TV ball colors as well as standard ball colors <i>(see screenshots below)</i>
-<hr>
+**CONFIG.js:**<BR>
+* `blackWhite` - Sets the ball type.
+  * `standard` Standard ball colors
+  * `white` TV Colors with white stripes
+  * `black` TV Colors with black stripes<br><br>
+* `position` - horizontal or vertical alignment of g4BallTracker
+  * `horizontal` 
+  * `vertical`<br><br>
+* `leftRight` - Only applies if the `position` setting is set to `vertical`
+  * `left` Aligns Left
+  * `right` Aligns Right<br><br>
+* `staticImages` - Defines ball behavior in the tracker. 
+  * `true` Ball positions are static, when a ball is removed a blank space remains where the ball was. 
+  * `false` Ball positions are dynamic, when a ball is removed the remaining balls move together filling any blank spaces.<br><br>
 
+***
 
-<b>USE:</b><br> 
-Choose which game `eight` `nine` or `ten` from the list and select overlay size.<br>
-Click on balls in dock to remove them from overlay when balls are pocketed. <br>
-`Hide` / `Show` Button will hide and display the ball minder list. <br>
-`Reset` button will reset the ball icons in the stream and dock.  <br><hr>
-
-
-<b>SETUP:</b><br>
-`1` &nbsp;&nbsp;&nbsp;open `config.js` in any text editor and change to suit your preferences.<br>
-`2` &nbsp;&nbsp;&nbsp;Add a new `Custom Browser Dock` in OBS, point this to the `control-panel.html` file in this download.<br>
-`3` &nbsp;&nbsp;&nbsp;Add a new `Browser` source to your scene. change the URL the the path of `browser-source.html`.<br>
-
-
-<hr>
-
-<sub>screenshots shown include [g4ScoreBoard](https://github.com/ngholson/g4ScoreBoard/)</sub>
-![tv_colors](https://user-images.githubusercontent.com/46265156/197374246-0dd21d4b-1e43-45ab-b072-eb2b39118786.png)
-![standard_colors](https://user-images.githubusercontent.com/46265156/197374250-fe7ff9ff-2f82-4b46-97ca-8c2d65a70bac.png)
+#### **SCREENSHOTS:**<br>
+<img src="https://obsproject.com/forum/attachments/tv_colors-png.87902/"><br><br>
+<img src="https://obsproject.com/forum/attachments/standard_colors-png.87901/">
+ 
