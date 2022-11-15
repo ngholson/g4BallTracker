@@ -12,7 +12,7 @@
 If [g4ScoreBoard](https://obsproject.com/forum/resources/g4scoreboard-a-pool-billiards-score-board.1586/) is installed: 
 * [g4BallTracker](https://github.com/ngholson/g4BallTracker) will auto reset when a players score is increased, or the reset button is clicked from the g4ScoreBoard control panel.
 * Hiding the g4ScoreBoard with the opacity slider will hide the tracker as well. 
-* If Hide is enabled on the [g4BallTracker](https://github.com/ngholson/g4BallTracker) it will ignore all reset and hide/show commands from the g4ScoreBoard.<br><br>
+* If Hide is enabled on the [g4BallTracker](https://github.com/ngholson/g4BallTracker) all reset and hide/show commands from the g4ScoreBoard will be ignored.<br><br>
 
 ***
 
