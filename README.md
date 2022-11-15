@@ -22,7 +22,7 @@ If [g4ScoreBoard](https://obsproject.com/forum/resources/g4scoreboard-a-pool-bil
 * Add a new ```Browser``` source to your scene. change the URL the the path of ```browser-source.html```.<br><br>
 
 **CONFIG.js:**<BR>
-* `blackWhite` - Sets the ball type.
+* `ballColor` - Sets the ball type.
   * `standard` Standard ball colors
   * `white` TV Colors with white stripes
   * `black` TV Colors with black stripes<br><br>
