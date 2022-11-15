@@ -7,7 +7,7 @@
 // create a new folder inside the images folder
 // name your images numbered 1-15 in .PNG format
 // and change this to the new folder name. 
-var blackWhite = "black";	// "black", "white", "standard"
+var ballColor = "black";	// "black", "white", "standard"
 
 
 // below here is still experimental, results may vary. 

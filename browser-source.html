@@ -114,7 +114,7 @@ Copyright 2022 Norman Gholson IV
 			if (g == "nine") { var gamebcount = 9; game = "nine"; }
 			if (g == "ten") { var gamebcount = 10; game = "ten"; }
 			let ballImg = "";
-			for (let i = 0; i < gamebcount; i++) { document.getElementById(g + "b" + balls[i]).innerHTML = "<img class='imgSize' src='./images/" + blackWhite + "/" + balls[i] + ".png'>"; }
+			for (let i = 0; i < gamebcount; i++) { document.getElementById(g + "b" + balls[i]).innerHTML = "<img class='imgSize' src='./images/" + ballColor + "/" + balls[i] + ".png'>"; }
 		}
 
 		// auto start processes.
@@ -124,7 +124,7 @@ Copyright 2022 Norman Gholson IV
 		if (game == "nine") { var gamebcount = 9; }
 		if (game == "ten") { var gamebcount = 10; }
 		let ballImg = "";
-		for (let i = 0; i < gamebcount; i++) { document.getElementById(game + "b" + balls[i]).innerHTML = "<img class='imgSize' src='./images/" + blackWhite + "/" + balls[i] + ".png'>"; }
+		for (let i = 0; i < gamebcount; i++) { document.getElementById(game + "b" + balls[i]).innerHTML = "<img class='imgSize' src='./images/" + ballColor + "/" + balls[i] + ".png'>"; }
 // end of startup processing. 
 
 	</script>
