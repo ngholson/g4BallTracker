@@ -1,4 +1,4 @@
-<div align="center"><img width="70px" src="https://obsproject.com/forum/attachments/icon-png.87900/" /><br><a href="https://github.com/ngholson/g4BallTracker/archive/refs/heads/main.zip">Download Here</a><br>This is a companion product for the <a href="https://obsproject.com/forum/resources/g4scoreboard-a-pool-billiards-score-board.1586/">g4ScoreBoard</a>.<br>But can also be used as a stand alone package.</div>
+<div align="center"><img width="70px" src="https://obsproject.com/forum/attachments/icon-png.87900/" /><br><a href="https://obsproject.com/forum/resources/g4balltracker-a-custom-dock-for-obs-pool-streamers.1622/download">Download Here</a><br>This is a companion product for the <a href="https://obsproject.com/forum/resources/g4scoreboard-a-pool-billiards-score-board.1586/">g4ScoreBoard</a>.<br>But can also be used as a stand alone package.</div>
 
 ***
 
