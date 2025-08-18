@@ -7,7 +7,7 @@
 // create a new folder inside the images folder
 // name your images numbered 1-15 in .PNG format
 // and change this to the new folder name. 
-var ballColor = "black";	// "black", "white", "standard"
+var ballColor = "black";	// "black", "white", "standard", "AI_Render", "render0" 
 
 
 // below here is still experimental, results may vary. 
@@ -17,3 +17,4 @@ var leftRight = "left";				// left or right (applies to vertical position)
 var staticImages = true;            // true = ball images are staticly positioned. false = dynamic ball position (no spaces between balls when a ball is removed)
                                         // static example:  (1)(2)      (5)(6)  (8)(9) 
                                         // dynamic example: (1)(2)(5)(6)(8)(9)
+
