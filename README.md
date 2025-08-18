@@ -27,7 +27,7 @@ If [g4ScoreBoard](https://obsproject.com/forum/resources/g4scoreboard-a-pool-bil
   * `white` TV Colors with white stripes
   * `black` TV Colors with black stripes
   * `AI_render` AI Rendered normal ball set
-  * `render0` ball set created by Ian McLoed <br><br>
+  * `render0` ball set created by Ian MacLoed <br><br>
 * `position` - horizontal or vertical alignment of g4BallTracker
   * `horizontal` 
   * `vertical`<br><br>
